@@ -13,5 +13,5 @@ El objetivo principal es **recolectar las 36 maravillas** que representan la gra
 - **Sistema de Combate por Turnos**: Batallas tácticas donde el ataque y la defensa determinan el resultado.
 - **Reclutamiento de Tropas**: Dos tipos de unidades (Ofensiva y Defensiva) con estadísticas balanceadas.
 - **Comercio y Misiones**: Gana recursos respondiendo preguntas de cultura general y estructuras de datos.
-- **Beneficios Acumulables**: Al reunir 8 unidades de la misma civilización, obtienes bonificaciones permanentes de ataque o defensa.
+- **Beneficios Acumulables**: Al reunir 8, 16 o 24 unidades de la misma civilización, obtienes bonificaciones permanentes acumulables de ataque o defensa.
 - **Visualización en Consola**: Interfaz amigable que muestra el estado del juego, el mapa de conexiones y las acciones disponibles.
