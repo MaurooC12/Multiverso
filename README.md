@@ -6,7 +6,7 @@
 
 ---
 
-## 🧠 Planteamiento Inicial
+## Planteamiento Inicial
 
 La idea surgió considerando una temática diferente y que se alineara con los parámetros establecidos de un multiverso donde deben existir mínimo 36 universos y cada universo debe tener máximo 6 conexiones. Se eligió el universo de *Age of Empires II* por su riqueza de civilizaciones y la variedad de unidades únicas, lo que permitía diseñar interacciones diferenciadas para cada nodo del grafo, utilizando la teoría de grafos, para crear un grafo conexo, con 36 nodos donde cada nodo tiene máximo 6 aristas incidentes.
 
