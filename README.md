@@ -33,9 +33,9 @@ La idea surgió considerando una temática diferente y que se alineara con los p
 ## Créditos
 
 - **Desarrollo**: Proyecto académico para la asignatura de **Estructuras de Datos**.
-- **Estudiantes**: 
-Andrés Mauricio Cepeda Villanueva
-Lucas García Álvarez
-Cristian David Prada Merchan
+- **Estudiantes**:  
+Andrés Mauricio Cepeda Villanueva  
+Lucas García Álvarez  
+Cristian David Prada Merchan  
 
 ---
