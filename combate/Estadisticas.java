@@ -99,7 +99,7 @@ public class Estadisticas {
     /**
      * Agrupa las unidades del jugador por civilización de origen.
      * @param jugador El jugador actual
-     * @return Mapa con nombre de civilización → cantidad de unidades
+    * @return Mapa con nombre de civilizacion a cantidad de unidades
      */
     public static Map<String, Integer> getUnidadesPorCivilizacion(Jugador jugador) {
         Map<String, Integer> mapa = new HashMap<>();
@@ -138,7 +138,7 @@ public class Estadisticas {
             System.out.println(civilizacion + ": " + cantidad + " unidades");
             if (niveles > 0 && tipoCivilizacion != null) {
                 String estadistica = "Ofensiva".equals(tipoCivilizacion) ? "ataque" : "defensa";
-                System.out.println("  ✅ " + niveles + " bono(s) activo(s) de " + estadistica + " (+" + (niveles * 25) + "%)");
+                System.out.println("" + niveles + " bono(s) activo(s) de " + estadistica + " (+" + (niveles * 25) + "%)");
             }
         }
         System.out.println("=============================\n");

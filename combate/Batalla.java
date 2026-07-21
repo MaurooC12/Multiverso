@@ -32,10 +32,10 @@ public class Batalla {
         @Override
         public String toString() {
             if (victoria) {
-                return "✅ VICTORIA! Obtienes " + oroGanado + " de oro y la maravilla '" + 
+                return "VICTORIA! Obtienes " + oroGanado + " de oro y la maravilla '" + 
                        maravillaObtenida + "'. Pierdes " + unidadesPerdidas + " unidades.";
             } else {
-                return "❌ DERROTA! Pierdes " + unidadesPerdidas + " unidades. La ciudad se refuerza.";
+                return "DERROTA! Pierdes " + unidadesPerdidas + " unidades. La ciudad se refuerza.";
             }
         }
     }
@@ -58,7 +58,7 @@ public class Batalla {
         int dañoInfligido = (int)(Math.random() * ataqueJugador) + 1;
         defensaCiudad -= dañoInfligido;
 
-        // Si la ciudad muere en el primer turno → VICTORIA
+        // Si la ciudad muere en el primer turno, victoria
         if (defensaCiudad <= 0) {
             int unidadesPerdidas = calcularPerdidas(jugador, 10, 30);
             jugador.perderUnidades(unidadesPerdidas);
@@ -73,7 +73,7 @@ public class Batalla {
         int dañoRecibido = (int)(Math.random() * ataqueCiudad) + 1;
         defensaJugador -= dañoRecibido;
 
-        // Si el jugador muere → DERROTA
+        // Si el jugador muere, derrota
         if (defensaJugador <= 0) {
             int unidadesPerdidas = calcularPerdidas(jugador, 60, 80);
             jugador.perderUnidades(unidadesPerdidas);

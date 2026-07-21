@@ -17,6 +17,6 @@ public class Conexion {
 
     @Override
     public String toString() {
-        return origen + " → " + destino;
+        return origen + " -> " + destino;
     }
 }

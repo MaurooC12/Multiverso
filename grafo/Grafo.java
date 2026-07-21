@@ -31,18 +31,18 @@ public class Grafo {
     }
 
     /**
-     * Agrega una conexión dirigida (origen → destino).
+     * Agrega una conexion dirigida (origen a destino).
      * Valida que el origen no supere 6 conexiones de salida.
      */
     public void agregarConexion(String origen, String destino) {
         if (!nodos.containsKey(origen) || !nodos.containsKey(destino)) {
-            System.out.println("⚠️ Error: " + origen + " o " + destino + " no existe en el grafo.");
+            System.out.println("Error: " + origen + " o " + destino + " no existe en el grafo.");
             return;
         }
 
         List<Conexion> conexionesOrigen = adyacencias.get(origen);
         if (conexionesOrigen.size() >= 6) {
-            System.out.println("⚠️ " + origen + " ya tiene 6 conexiones. No se puede agregar más.");
+            System.out.println("Advertencia: " + origen + " ya tiene 6 conexiones. No se puede agregar mas.");
             return;
         }
 
@@ -111,7 +111,7 @@ public class Grafo {
 
         boolean conexo = visitados.size() == nodos.size();
         if (!conexo) {
-            System.out.println("⚠️ Nodos no alcanzables desde " + inicio + ":");
+            System.out.println("Nodos no alcanzables desde " + inicio + ":");
             for (String nombre : nodos.keySet()) {
                 if (!visitados.contains(nombre)) {
                     System.out.println("   - " + nombre);
@@ -127,7 +127,7 @@ public class Grafo {
     public void imprimirGrafo() {
         System.out.println("\n=== MAPA DEL MULTIVERSO (CONEXIONES) ===");
         for (String origen : adyacencias.keySet()) {
-            System.out.print(origen + " → ");
+            System.out.print(origen + " -> ");
             List<Conexion> conexiones = adyacencias.get(origen);
             if (conexiones.isEmpty()) {
                 System.out.println("(sin conexiones)");
