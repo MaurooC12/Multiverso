@@ -1,5 +1,5 @@
 package Multiverso;
-import Multiverso.controlador.Juego;
+import Multiverso.src.controlador.Juego;
 
 /**
  * Punto de entrada del programa.

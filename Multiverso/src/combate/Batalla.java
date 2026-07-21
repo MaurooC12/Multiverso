@@ -1,7 +1,7 @@
-package Multiverso.combate;
+package Multiverso.src.combate;
 
-import Multiverso.modelo.Civilizacion;
-import Multiverso.modelo.Jugador;
+import modelo.Jugador;
+import modelo.Civilizacion;
 
 /**
  * Clase que simula el combate por turnos entre el jugador y una ciudad.

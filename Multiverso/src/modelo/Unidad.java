@@ -1,4 +1,4 @@
-package Multiverso.modelo;
+package Multiverso.src.modelo;
 
 /**
  * Clase que representa una unidad (tropa) del jugador.

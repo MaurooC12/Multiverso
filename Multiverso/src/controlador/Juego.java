@@ -1,13 +1,13 @@
-package Multiverso.controlador;
+package Multiverso.src.controlador;
 
 import java.util.List;
 import java.util.Random;
 
-import Multiverso.combate.Batalla;
-import Multiverso.combate.Estadisticas;
-import Multiverso.grafo.Grafo;
-import Multiverso.modelo.*;
-import Multiverso.vista.Consola;
+import Multiverso.src.combate.Batalla;
+import Multiverso.src.combate.Estadisticas;
+import Multiverso.src.grafo.Grafo;
+import Multiverso.src.modelo.*;
+import Multiverso.src.vista.Consola;
 
 /**
  * Clase orquestadora principal del juego.

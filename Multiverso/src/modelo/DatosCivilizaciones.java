@@ -1,6 +1,6 @@
-package Multiverso.modelo;
+package Multiverso.src.modelo;
 
-import Multiverso.grafo.Grafo;
+import Multiverso.src.grafo.Grafo;
 
 /**
  * Clase que contiene la carga de datos de las 36 civilizaciones y sus conexiones.

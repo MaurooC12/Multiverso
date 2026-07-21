@@ -1,9 +1,8 @@
-package Multiverso.grafo;
+package Multiverso.src.grafo;
 
+import modelo.Civilizacion;
+import modelo.Conexion;
 import java.util.*;
-
-import Multiverso.modelo.Civilizacion;
-import Multiverso.modelo.Conexion;
 
 /**
  * Clase que implementa un grafo dirigido para representar el multiverso.

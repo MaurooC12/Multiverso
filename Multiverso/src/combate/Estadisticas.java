@@ -1,9 +1,8 @@
-package Multiverso.combate;
+package Multiverso.src.combate;
 
+import modelo.Jugador;
+import modelo.Unidad;
 import java.util.*;
-
-import Multiverso.modelo.Jugador;
-import Multiverso.modelo.Unidad;
 
 /**
  * Clase utilitaria para calcular estadísticas del jugador.
