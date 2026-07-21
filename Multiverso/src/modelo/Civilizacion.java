@@ -1,16 +1,12 @@
-package Multiverso.src.modelo;
+package modelo;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Clase que representa una civilización dentro del multiverso.
- * Almacena toda la información estática de cada civilización.
- */
 public class Civilizacion {
     private String nombre;
-    private String tipo; // "Ofensiva" o "Defensiva"
-    private String dificultad; // "Fácil", "Media", "Difícil"
+    private String tipo;
+    private String dificultad;
     private int ataqueCiudad;
     private int defensaCiudad;
     private String maravilla;
@@ -27,7 +23,6 @@ public class Civilizacion {
         this.conexiones = new ArrayList<>();
     }
 
-    // Getters
     public String getNombre() { return nombre; }
     public String getTipo() { return tipo; }
     public String getDificultad() { return dificultad; }

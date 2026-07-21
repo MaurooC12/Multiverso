@@ -1,11 +1,8 @@
-package Multiverso.src.modelo;
+package modelo;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Clase que gestiona el estado del jugador durante la partida.
- */
 public class Jugador {
     private int oro;
     private int tickets;
@@ -13,7 +10,7 @@ public class Jugador {
     private int maxPoblacion = 25;
     private List<Unidad> unidades;
     private List<String> maravillasRecolectadas;
-    private int ataqueExtra; // mejoras permanentes
+    private int ataqueExtra;
     private int defensaExtra;
 
     public Jugador() {
@@ -26,22 +23,16 @@ public class Jugador {
         this.defensaExtra = 0;
     }
 
-    // Getters y setters
     public int getOro() { return oro; }
     public void setOro(int oro) { this.oro = Math.min(oro, 200); }
-    
     public int getTickets() { return tickets; }
     public void setTickets(int tickets) { this.tickets = Math.min(tickets, 30); }
-    
     public int getPoblacion() { return poblacion; }
     public int getMaxPoblacion() { return maxPoblacion; }
-    
     public List<Unidad> getUnidades() { return unidades; }
     public List<String> getMaravillasRecolectadas() { return maravillasRecolectadas; }
-    
     public int getAtaqueExtra() { return ataqueExtra; }
     public void setAtaqueExtra(int ataqueExtra) { this.ataqueExtra = ataqueExtra; }
-    
     public int getDefensaExtra() { return defensaExtra; }
     public void setDefensaExtra(int defensaExtra) { this.defensaExtra = defensaExtra; }
 

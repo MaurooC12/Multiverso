@@ -1,7 +1,7 @@
-package Multiverso.src.combate;
+package combate;
 
-import Multiverso.src.modelo.Jugador;
-import Multiverso.src.modelo.Civilizacion;
+import modelo.Jugador;
+import modelo.Civilizacion;
 
 /**
  * Clase que simula el combate por turnos entre el jugador y una ciudad.
@@ -42,9 +42,6 @@ public class Batalla {
 
     /**
      * Simula una batalla entre el jugador y una ciudad.
-     * @param jugador El jugador actual
-     * @param ciudad La civilización a atacar
-     * @return Resultado de la batalla
      */
     public static Resultado pelear(Jugador jugador, Civilizacion ciudad) {
         int ataqueJugador = Estadisticas.getAtaqueTotal(jugador);
@@ -52,13 +49,10 @@ public class Batalla {
         int ataqueCiudad = ciudad.getAtaqueCiudad();
         int defensaCiudad = ciudad.getDefensaCiudad();
 
-        // ============================================
         // TURNO 1: JUGADOR ATACA
-        // ============================================
         int dañoInfligido = (int)(Math.random() * ataqueJugador) + 1;
         defensaCiudad -= dañoInfligido;
 
-        // Si la ciudad muere en el primer turno, victoria
         if (defensaCiudad <= 0) {
             int unidadesPerdidas = calcularPerdidas(jugador, 10, 30);
             jugador.perderUnidades(unidadesPerdidas);
@@ -67,23 +61,18 @@ public class Batalla {
             return new Resultado(true, 20, unidadesPerdidas, ciudad.getMaravilla());
         }
 
-        // ============================================
         // TURNO 2: CIUDAD CONTRAATACA
-        // ============================================
         int dañoRecibido = (int)(Math.random() * ataqueCiudad) + 1;
         defensaJugador -= dañoRecibido;
 
-        // Si el jugador muere, derrota
         if (defensaJugador <= 0) {
             int unidadesPerdidas = calcularPerdidas(jugador, 60, 80);
             jugador.perderUnidades(unidadesPerdidas);
-            ciudad.setDefensaCiudad(ciudad.getDefensaCiudad() + 5); // ciudad se refuerza
+            ciudad.setDefensaCiudad(ciudad.getDefensaCiudad() + 5);
             return new Resultado(false, 0, unidadesPerdidas, null);
         }
 
-        // ============================================
         // VICTORIA CON DAÑO RECIBIDO
-        // ============================================
         int unidadesPerdidas = calcularPerdidas(jugador, 10, 30);
         jugador.perderUnidades(unidadesPerdidas);
         jugador.agregarMaravilla(ciudad.getMaravilla());
@@ -91,21 +80,11 @@ public class Batalla {
         return new Resultado(true, 20, unidadesPerdidas, ciudad.getMaravilla());
     }
 
-    /**
-     * Calcula el número de unidades perdidas en una batalla.
-     * @param jugador El jugador actual
-     * @param min Porcentaje mínimo de pérdida
-     * @param max Porcentaje máximo de pérdida
-     * @return Número de unidades a perder
-     */
     private static int calcularPerdidas(Jugador jugador, int min, int max) {
         int totalUnidades = jugador.getUnidades().size();
         if (totalUnidades == 0) return 0;
-        
         int porcentaje = (int)(Math.random() * (max - min + 1)) + min;
         int perdidas = (int)Math.round(totalUnidades * porcentaje / 100.0);
-        
-        // Asegurar que no se pierdan más unidades de las que hay
         return Math.min(perdidas, totalUnidades);
     }
 }

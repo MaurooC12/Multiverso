@@ -1,13 +1,10 @@
-package Multiverso.src.modelo;
+package modelo;
 
-/**
- * Clase que representa una unidad (tropa) del jugador.
- */
 public class Unidad {
-    private String tipo; // "Ofensiva" o "Defensiva"
+    private String tipo;
     private int ataque;
     private int defensa;
-    private String civilizacionOrigen; // para calcular beneficios
+    private String civilizacionOrigen;
 
     public Unidad(String tipo, String civilizacionOrigen) {
         this.tipo = tipo;
@@ -15,13 +12,12 @@ public class Unidad {
         if (tipo.equals("Ofensiva")) {
             this.ataque = 10;
             this.defensa = 3;
-        } else { // Defensiva
+        } else {
             this.ataque = 3;
             this.defensa = 10;
         }
     }
 
-    // Getters
     public String getTipo() { return tipo; }
     public int getAtaque() { return ataque; }
     public int getDefensa() { return defensa; }

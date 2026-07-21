@@ -1,8 +1,5 @@
-package Multiverso.src.modelo;
+package modelo;
 
-/**
- * Clase que representa una arista (conexión) en el grafo dirigido.
- */
 public class Conexion {
     private String origen;
     private String destino;
