@@ -1,7 +1,7 @@
 package Multiverso.src.combate;
 
-import modelo.Jugador;
-import modelo.Unidad;
+import Multiverso.src.modelo.Jugador;
+import Multiverso.src.modelo.Unidad;
 import java.util.*;
 
 /**

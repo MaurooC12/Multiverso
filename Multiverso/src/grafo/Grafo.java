@@ -1,7 +1,7 @@
 package Multiverso.src.grafo;
 
-import modelo.Civilizacion;
-import modelo.Conexion;
+import Multiverso.src.modelo.Civilizacion;
+import Multiverso.src.modelo.Conexion;
 import java.util.*;
 
 /**
@@ -32,7 +32,8 @@ public class Grafo {
 
     /**
      * Agrega una conexion dirigida (origen a destino).
-     * Valida que el origen no supere 6 conexiones de salida.
+     * Valida que el origen no supere 6 conexiones de salida y evita
+     * conexiones reciprocas para mantener el grafo como dirigido.
      */
     public void agregarConexion(String origen, String destino) {
         if (!nodos.containsKey(origen) || !nodos.containsKey(destino)) {
@@ -51,6 +52,10 @@ public class Grafo {
             if (c.getDestino().equals(destino)) {
                 return; // Ya existe esta conexión
             }
+        }
+
+        if (tieneConexion(destino, origen)) {
+            return;
         }
 
         Conexion conexion = new Conexion(origen, destino);
@@ -87,38 +92,109 @@ public class Grafo {
     }
 
     /**
-     * Verifica si el grafo es conexo usando BFS.
+     * Verifica si el grafo es fuertemente conexo.
+     * Debe existir un camino dirigido desde cualquier nodo hacia cualquier otro.
      */
     public boolean esConexo() {
         if (nodos.isEmpty()) return false;
 
+        String inicio = nodos.keySet().iterator().next();
+        Set<String> alcanzablesDesdeInicio = bfsConexiones(inicio, adyacencias);
+        if (alcanzablesDesdeInicio.size() != nodos.size()) {
+            System.out.println("Nodos no alcanzables desde " + inicio + ":");
+            for (String nombre : nodos.keySet()) {
+                if (!alcanzablesDesdeInicio.contains(nombre)) {
+                    System.out.println("   - " + nombre);
+                }
+            }
+            return false;
+        }
+
+        Map<String, List<String>> adyacenciasInvertidas = construirAdyacenciasInvertidas();
+        Set<String> alcanzablesHaciaInicio = bfs(inicio, adyacenciasInvertidas);
+        if (alcanzablesHaciaInicio.size() != nodos.size()) {
+            System.out.println("Nodos que no pueden retornar hacia " + inicio + ":");
+            for (String nombre : nodos.keySet()) {
+                if (!alcanzablesHaciaInicio.contains(nombre)) {
+                    System.out.println("   - " + nombre);
+                }
+            }
+            return false;
+        }
+
+        return true;
+    }
+
+    private Set<String> bfsConexiones(String inicio, Map<String, List<Conexion>> mapaAdyacencia) {
         Set<String> visitados = new HashSet<>();
         Queue<String> cola = new LinkedList<>();
-        
-        String inicio = nodos.keySet().iterator().next();
+
         cola.add(inicio);
         visitados.add(inicio);
 
         while (!cola.isEmpty()) {
             String actual = cola.poll();
-            for (Conexion c : adyacencias.get(actual)) {
-                if (!visitados.contains(c.getDestino())) {
-                    visitados.add(c.getDestino());
-                    cola.add(c.getDestino());
+            List<Conexion> vecinos = mapaAdyacencia.getOrDefault(actual, new ArrayList<>());
+            for (Conexion vecino : vecinos) {
+                String destino = vecino.getDestino();
+                if (!visitados.contains(destino)) {
+                    visitados.add(destino);
+                    cola.add(destino);
                 }
             }
         }
 
-        boolean conexo = visitados.size() == nodos.size();
-        if (!conexo) {
-            System.out.println("Nodos no alcanzables desde " + inicio + ":");
-            for (String nombre : nodos.keySet()) {
-                if (!visitados.contains(nombre)) {
-                    System.out.println("   - " + nombre);
+        return visitados;
+    }
+
+    private boolean tieneConexion(String origen, String destino) {
+        List<Conexion> conexiones = adyacencias.get(origen);
+        if (conexiones == null) {
+            return false;
+        }
+        for (Conexion conexion : conexiones) {
+            if (conexion.getDestino().equals(destino)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private Set<String> bfs(String inicio, Map<String, List<String>> mapaAdyacencia) {
+        Set<String> visitados = new HashSet<>();
+        Queue<String> cola = new LinkedList<>();
+
+        cola.add(inicio);
+        visitados.add(inicio);
+
+        while (!cola.isEmpty()) {
+            String actual = cola.poll();
+            List<String> vecinos = mapaAdyacencia.getOrDefault(actual, new ArrayList<>());
+            for (String vecino : vecinos) {
+                if (!visitados.contains(vecino)) {
+                    visitados.add(vecino);
+                    cola.add(vecino);
                 }
             }
         }
-        return conexo;
+
+        return visitados;
+    }
+
+    private Map<String, List<String>> construirAdyacenciasInvertidas() {
+        Map<String, List<String>> invertidas = new HashMap<>();
+        for (String nombre : nodos.keySet()) {
+            invertidas.put(nombre, new ArrayList<>());
+        }
+
+        for (Map.Entry<String, List<Conexion>> entry : adyacencias.entrySet()) {
+            String origen = entry.getKey();
+            for (Conexion conexion : entry.getValue()) {
+                invertidas.get(conexion.getDestino()).add(origen);
+            }
+        }
+
+        return invertidas;
     }
 
     /**

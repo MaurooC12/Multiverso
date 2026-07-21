@@ -8,16 +8,18 @@
 			"args": [
 				"-encoding",
 				"UTF-8",
-				"Main.java",
-				"combate/*.java",
-				"controlador/*.java",
-				"grafo/*.java",
-				"modelo/*.java",
-				"vista/*.java"
+				"-d",
+				"out",
+				"src/Main.java",
+				"src/combate/*.java",
+				"src/controlador/*.java",
+				"src/grafo/*.java",
+				"src/modelo/*.java",
+				"src/vista/*.java"
 			],
 			"isBackground": false,
 			"problemMatcher": [
-				"$tsc"
+				"$javac"
 			],
 			"group": "build"
 		}
