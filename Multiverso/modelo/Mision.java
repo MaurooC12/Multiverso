@@ -1,4 +1,4 @@
-package modelo;
+package Multiverso.modelo;
 
 import java.util.Random;
 

@@ -1,9 +1,10 @@
-package vista;
+package Multiverso.vista;
 
-import modelo.*;
-import grafo.Grafo;
 import java.util.List;
 import java.util.Scanner;
+
+import Multiverso.grafo.Grafo;
+import Multiverso.modelo.*;
 
 /**
  * Clase que maneja toda la interacción con el usuario en consola.
@@ -74,8 +75,8 @@ public class Consola {
         
         // Mostrar beneficios activos
         System.out.println("\nBeneficios activos:");
-        double bonifAtaque = combate.Estadisticas.getBonificacionAtaque(jugador);
-        double bonifDefensa = combate.Estadisticas.getBonificacionDefensa(jugador);
+        double bonifAtaque = Multiverso.combate.Estadisticas.getBonificacionAtaque(jugador);
+        double bonifDefensa = Multiverso.combate.Estadisticas.getBonificacionDefensa(jugador);
         if (bonifAtaque > 0) System.out.println("   Ataque +" + (int)bonifAtaque + "%");
         if (bonifDefensa > 0) System.out.println("   Defensa +" + (int)bonifDefensa + "%");
         if (bonifAtaque == 0 && bonifDefensa == 0) System.out.println("   Ningun beneficio activo");
@@ -100,8 +101,8 @@ public class Consola {
         System.out.println("Poblacion: " + jugador.getPoblacion() + "/" + jugador.getMaxPoblacion());
         System.out.println("Maravillas: " + jugador.getMaravillasCount() + "/36");
         
-        System.out.println("\nAtaque total: " + combate.Estadisticas.getAtaqueTotal(jugador));
-        System.out.println("Defensa total: " + combate.Estadisticas.getDefensaTotal(jugador));
+        System.out.println("\nAtaque total: " + Multiverso.combate.Estadisticas.getAtaqueTotal(jugador));
+        System.out.println("Defensa total: " + Multiverso.combate.Estadisticas.getDefensaTotal(jugador));
         
         System.out.println("\nUnidades (" + jugador.getUnidades().size() + "):");
         if (jugador.getUnidades().isEmpty()) {
@@ -180,7 +181,7 @@ public class Consola {
     /**
      * Muestra el resultado de una batalla.
      */
-    public void mostrarResultadoBatalla(combate.Batalla.Resultado resultado, String ciudadNombre) {
+    public void mostrarResultadoBatalla(Multiverso.combate.Batalla.Resultado resultado, String ciudadNombre) {
         System.out.println("\n======================================================");
         System.out.println("                    BATALLA                           ");
         System.out.println("======================================================");

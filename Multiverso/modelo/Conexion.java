@@ -1,4 +1,4 @@
-package modelo;
+package Multiverso.modelo;
 
 /**
  * Clase que representa una arista (conexión) en el grafo dirigido.

@@ -1,4 +1,5 @@
-import controlador.Juego;
+package Multiverso;
+import Multiverso.controlador.Juego;
 
 /**
  * Punto de entrada del programa.

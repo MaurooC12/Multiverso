@@ -1,20 +1,31 @@
-# Multiverso de Civilizaciones
+#  Age of Empires II
 
-**Multiverso de Civilizaciones** es un juego de estrategia y exploración basado en el universo de *Age of Empires II*. 
-El jugador asume el rol de un **Viajero Eterno** que navega a través de 36 civilizaciones distintas, cada una con su propia identidad, unidad única y nivel de dificultad. 
+## Descripción General
 
-El objetivo principal es **recolectar las 36 maravillas** que representan la grandeza de cada civilización.
+**Multiverso de Civilizaciones** es un juego de exploración y conquista desarrollado como proyecto final para la asignatura de **Estructuras de Datos**. El jugador asume el rol de un **Viajero Eterno** que navega a través de 36 civilizaciones del universo de *Age of Empires II*, con el objetivo de recolectar las 36 maravillas que representan la grandeza de cada cultura.
 
 ---
 
-## Características Principales
+## 🧠 Planteamiento Inicial
 
-- **Grafo Dirigido**: 36 nodos interconectados (máximo 6 conexiones por nodo) que representan un multiverso de civilizaciones.
-- **Sistema de Combate por Turnos**: Batallas tácticas donde el ataque y la defensa determinan el resultado.
-- **Reclutamiento de Tropas**: Dos tipos de unidades (Ofensiva y Defensiva) con estadísticas balanceadas.
-- **Comercio y Misiones**: Gana recursos respondiendo preguntas de cultura general y estructuras de datos.
-- **Beneficios Acumulables**: Al reunir 8, 16 o 24 unidades de la misma civilización, obtienes bonificaciones permanentes acumulables de ataque o defensa.
-- **Visualización en Consola**: Interfaz amigable que muestra el estado del juego, el mapa de conexiones y las acciones disponibles.
+La idea surgió considerando una temática diferente y que se alineara con los parámetros establecidos de un multiverso donde deben existir mínimo 36 universos y cada universo debe tener máximo 6 conexiones. Se eligió el universo de *Age of Empires II* por su riqueza de civilizaciones y la variedad de unidades únicas, lo que permitía diseñar interacciones diferenciadas para cada nodo del grafo, utilizando la teoría de grafos, para crear un grafo conexo, con 36 nodos donde cada nodo tiene máximo 6 aristas incidentes.
 
-## Modo de Uso
-(Hay que dar una guía levemente detallada de un paso a paso para el usuario nuevo).
+### Decisiones de diseño:
+
+- **36 civilizaciones** → Nodos del grafo.
+- **Máximo 6 conexiones por nodo** → Cada civilización tiene entre 4 y 6 rutas de viaje.
+- **Grafo conexo** → Se puede llegar de cualquier nodo a cualquier otro.
+- **Conexiones unidireccionales** → Representan rutas comerciales o conquistas históricas donde no se puede devolver a la civilización ya seleccionada.
+- **Dos tipos de unidad** → Ofensiva (10 ataque, 3 defensa) y Defensiva (3 ataque, 10 defensa).
+- **Sistema de combate por turnos** → El jugador ataca, luego la ciudad contraataca.
+- **Beneficios acumulables** → Cada 8 unidades de una misma civilización otorgan +25% de ataque o defensa.
+
+---
+
+## Mapa del Multiverso
+
+![Mapa del Multiverso](docs/grafo.png)
+
+*Cada nodo es una civilización. Las flechas indican las rutas de viaje disponibles.*
+
+---
