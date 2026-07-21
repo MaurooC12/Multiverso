@@ -15,3 +15,6 @@ El objetivo principal es **recolectar las 36 maravillas** que representan la gra
 - **Comercio y Misiones**: Gana recursos respondiendo preguntas de cultura general y estructuras de datos.
 - **Beneficios Acumulables**: Al reunir 8, 16 o 24 unidades de la misma civilización, obtienes bonificaciones permanentes acumulables de ataque o defensa.
 - **Visualización en Consola**: Interfaz amigable que muestra el estado del juego, el mapa de conexiones y las acciones disponibles.
+
+## Modo de Uso
+(Hay que dar una guía levemente detallada de un paso a paso para el usuario nuevo).
