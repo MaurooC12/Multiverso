@@ -9,11 +9,11 @@
 				"-encoding",
 				"UTF-8",
 				"Main.java",
-				"combate\\*.java",
-				"controlador\\*.java",
-				"grafo\\*.java",
-				"modelo\\*.java",
-				"vista\\*.java"
+				"combate/*.java",
+				"controlador/*.java",
+				"grafo/*.java",
+				"modelo/*.java",
+				"vista/*.java"
 			],
 			"isBackground": false,
 			"problemMatcher": [
