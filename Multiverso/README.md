@@ -1,6 +1,6 @@
-# Multiverso de Civilizaciones — Código Fuente
+# Código Fuente
 
-Bienvenido al código fuente del **Multiverso de Civilizaciones**.
+Código fuente del **Multiverso de Civilizaciones**.
 
 Esta carpeta contiene el proyecto completo, organizado de la siguiente manera:
 
