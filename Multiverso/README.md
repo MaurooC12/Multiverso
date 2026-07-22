@@ -13,4 +13,4 @@ Esta carpeta contiene el proyecto completo, organizado de la siguiente manera:
 | `.vscode/` | Contiene `tasks.json` con la configuración para compilar el proyecto en VS Code. |
 | `docs/` | Almacena la imagen del grafo (`grafo.png`) que se usa en la documentación. |
 | `src/` | Todo el código fuente del juego, organizado por capas (modelo, vista, controlador, combate, grafo). |
-| `out/` | Carpeta generada automáticamente al compilar. Contiene los archivos `.class` (no se sube al repositorio). |
+| `out/` | Carpeta generada automáticamente al compilar. Contiene los archivos `.class`. |
