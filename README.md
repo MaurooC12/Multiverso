@@ -24,7 +24,7 @@ La idea surgió considerando una temática diferente y que se alineara con los p
 
 ## Grafo del Multiverso
 
-![Grafo del Multiverso](docs/grafo.png)
+<img width="2390" height="1990" alt="grafo" src="https://github.com/user-attachments/assets/3a2c35f2-2421-4266-bb65-fe7af21b2685" />
 
 *Cada nodo es una civilización. Las flechas indican las rutas de viaje disponibles.*
 
