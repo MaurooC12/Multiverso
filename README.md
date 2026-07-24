@@ -38,5 +38,5 @@ Proyecto académico para la asignatura de **Estructuras de Datos**.
 Andrés Mauricio Cepeda Villanueva  
 Lucas García Álvarez  
 Cristian David Prada Merchan  
-
+Camilo Ortega Bautista
 ---
