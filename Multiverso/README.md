@@ -17,11 +17,11 @@ Esta carpeta contiene el proyecto completo, organizado de la siguiente manera:
 
 ---
 
-## 📊 Estructuras de Datos Utilizadas
+## Estructuras de Datos Utilizadas
 
 Este proyecto aplica los siguientes conceptos de estructuras de datos en su implementación:
 
-### ✅ Implementadas en el código
+### Implementadas en el código
 
 | Estructura | Uso en el proyecto |
 |------------|---------------------|
