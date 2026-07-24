@@ -60,149 +60,130 @@ public class DatosCivilizaciones {
         grafo.agregarNodo(new Civilizacion("Muisca", "Defensiva", "Media", 75, 80, "Templo del Sol"));
 
         // ============================================================
-        // 2. CONEXIONES EXACTAS SEGÚN LA LISTA ACORDADA
+        // 2. CONEXIONES (TABLA DEFINITIVA)
         // ============================================================
         
+        // Europa Occidental
         grafo.agregarConexion("Britanos", "Francos");
         grafo.agregarConexion("Britanos", "Celtas");
+        grafo.agregarConexion("Britanos", "Vikingos");
+        grafo.agregarConexion("Britanos", "Eslavos");
 
         grafo.agregarConexion("Francos", "Teutones");
         grafo.agregarConexion("Francos", "Godos");
         grafo.agregarConexion("Francos", "Españoles");
 
-        grafo.agregarConexion("Godos", "Vikingos");
-        grafo.agregarConexion("Godos", "Bizantinos");
-
-        grafo.agregarConexion("Celtas", "Vikingos");
-        grafo.agregarConexion("Celtas", "Britanos");
-
-        grafo.agregarConexion("Vikingos", "Britanos");
-        grafo.agregarConexion("Vikingos", "Eslavos");
-        grafo.agregarConexion("Vikingos", "Malayos");
-
         grafo.agregarConexion("Teutones", "Italianos");
-        grafo.agregarConexion("Teutones", "Francos");
+        grafo.agregarConexion("Teutones", "Bizantinos");
 
         grafo.agregarConexion("Italianos", "Bizantinos");
         grafo.agregarConexion("Italianos", "Españoles");
         grafo.agregarConexion("Italianos", "Portugueses");
 
         grafo.agregarConexion("Bizantinos", "Turcos");
-        grafo.agregarConexion("Bizantinos", "Eslavos");
+        grafo.agregarConexion("Bizantinos", "Magiares");
         grafo.agregarConexion("Bizantinos", "Persas");
-
-        grafo.agregarConexion("Eslavos", "Magiares");
-        grafo.agregarConexion("Eslavos", "Bizantinos");
-        grafo.agregarConexion("Eslavos", "Mongoles");
-
-        grafo.agregarConexion("Magiares", "Hunos");
-        grafo.agregarConexion("Magiares", "Eslavos");
-        grafo.agregarConexion("Magiares", "Turcos");
-
-        grafo.agregarConexion("Hunos", "Mongoles");
-        grafo.agregarConexion("Hunos", "Godos");
-        grafo.agregarConexion("Hunos", "Persas");
 
         grafo.agregarConexion("Turcos", "Sarracenos");
         grafo.agregarConexion("Turcos", "Bereberes");
-        grafo.agregarConexion("Turcos", "Bizantinos");
-
-        grafo.agregarConexion("Españoles", "Portugueses");
-        grafo.agregarConexion("Españoles", "Aztecas");
-        grafo.agregarConexion("Españoles", "Bereberes");
-
-        grafo.agregarConexion("Portugueses", "Malíes");
-        grafo.agregarConexion("Portugueses", "Italianos");
-        grafo.agregarConexion("Portugueses", "Etíopes");
-
-        grafo.agregarConexion("Bereberes", "Sarracenos");
-        grafo.agregarConexion("Bereberes", "Malíes");
-        grafo.agregarConexion("Bereberes", "Españoles");
 
         grafo.agregarConexion("Sarracenos", "Persas");
-        grafo.agregarConexion("Sarracenos", "Bereberes");
-        grafo.agregarConexion("Sarracenos", "Mongoles");
 
         grafo.agregarConexion("Persas", "Mongoles");
-        grafo.agregarConexion("Persas", "Indostaníes");
         grafo.agregarConexion("Persas", "Gurjaras");
 
         grafo.agregarConexion("Mongoles", "Chinos");
-        grafo.agregarConexion("Mongoles", "Hunos");
         grafo.agregarConexion("Mongoles", "Sarracenos");
-        grafo.agregarConexion("Mongoles", "Eslavos");
-
-        grafo.agregarConexion("Malíes", "Etíopes");
-        grafo.agregarConexion("Malíes", "Gurjaras");
-        grafo.agregarConexion("Malíes", "Portugueses");
-
-        grafo.agregarConexion("Etíopes", "Dravídicos");
-        grafo.agregarConexion("Etíopes", "Malíes");
-        grafo.agregarConexion("Etíopes", "Sarracenos");
-
-        grafo.agregarConexion("Indostaníes", "Gurjaras");
-        grafo.agregarConexion("Indostaníes", "Bengalíes");
-        grafo.agregarConexion("Indostaníes", "Persas");
-
-        grafo.agregarConexion("Gurjaras", "Bengalíes");
-        grafo.agregarConexion("Gurjaras", "Dravídicos");
-        grafo.agregarConexion("Gurjaras", "Malíes");
-
-        grafo.agregarConexion("Bengalíes", "Jemer");
-        grafo.agregarConexion("Bengalíes", "Birmanos");
-        grafo.agregarConexion("Bengalíes", "Indostaníes");
-
-        grafo.agregarConexion("Dravídicos", "Indostaníes");
-        grafo.agregarConexion("Dravídicos", "Etíopes");
-        grafo.agregarConexion("Dravídicos", "Bengalíes");
 
         grafo.agregarConexion("Chinos", "Japoneses");
         grafo.agregarConexion("Chinos", "Coreanos");
         grafo.agregarConexion("Chinos", "Vietnamitas");
 
         grafo.agregarConexion("Japoneses", "Malayos");
-        grafo.agregarConexion("Japoneses", "Chinos");
         grafo.agregarConexion("Japoneses", "Vikingos");
-
-        grafo.agregarConexion("Coreanos", "Vietnamitas");
-        grafo.agregarConexion("Coreanos", "Chinos");
-        grafo.agregarConexion("Coreanos", "Japoneses");
-
-        grafo.agregarConexion("Vietnamitas", "Jemer");
-        grafo.agregarConexion("Vietnamitas", "Chinos");
-        grafo.agregarConexion("Vietnamitas", "Malayos");
-
-        grafo.agregarConexion("Jemer", "Malayos");
-        grafo.agregarConexion("Jemer", "Bengalíes");
-        grafo.agregarConexion("Jemer", "Chinos");
 
         grafo.agregarConexion("Malayos", "Birmanos");
         grafo.agregarConexion("Malayos", "Vietnamitas");
-        grafo.agregarConexion("Malayos", "Japoneses");
 
         grafo.agregarConexion("Birmanos", "Indostaníes");
-        grafo.agregarConexion("Birmanos", "Bengalíes");
         grafo.agregarConexion("Birmanos", "Jemer");
+
+        grafo.agregarConexion("Indostaníes", "Gurjaras");
+        grafo.agregarConexion("Indostaníes", "Persas");
+
+        grafo.agregarConexion("Gurjaras", "Bengalíes");
+        grafo.agregarConexion("Gurjaras", "Dravídicos");
+        grafo.agregarConexion("Gurjaras", "Malíes");
+
+        grafo.agregarConexion("Malíes", "Portugueses");
+
+        grafo.agregarConexion("Bereberes", "Sarracenos");
+        grafo.agregarConexion("Bereberes", "Malíes");
+        grafo.agregarConexion("Bereberes", "Españoles");
+
+        grafo.agregarConexion("Españoles", "Portugueses");
 
         grafo.agregarConexion("Aztecas", "Mayas");
         grafo.agregarConexion("Aztecas", "Incas");
         grafo.agregarConexion("Aztecas", "Españoles");
 
-        grafo.agregarConexion("Mayas", "Mapuche");
-        grafo.agregarConexion("Mayas", "Aztecas");
-        grafo.agregarConexion("Mayas", "Incas");
-
         grafo.agregarConexion("Incas", "Mapuche");
-        grafo.agregarConexion("Incas", "Españoles");
-        grafo.agregarConexion("Incas", "Aztecas");
+        grafo.agregarConexion("Incas", "Etíopes");
 
         grafo.agregarConexion("Mapuche", "Muisca");
         grafo.agregarConexion("Mapuche", "Aztecas");
-        grafo.agregarConexion("Mapuche", "Mayas");
+        grafo.agregarConexion("Mapuche", "Españoles");
 
         grafo.agregarConexion("Muisca", "Españoles");
         grafo.agregarConexion("Muisca", "Mayas");
         grafo.agregarConexion("Muisca", "Aztecas");
+
+        grafo.agregarConexion("Mayas", "Mapuche");
+        grafo.agregarConexion("Mayas", "Incas");
+
+        grafo.agregarConexion("Vikingos", "Eslavos");
+        grafo.agregarConexion("Vikingos", "Malayos");
+
+        grafo.agregarConexion("Celtas", "Vikingos");
+        grafo.agregarConexion("Celtas", "Eslavos");
+
+        grafo.agregarConexion("Eslavos", "Magiares");
+        grafo.agregarConexion("Eslavos", "Teutones");
+        grafo.agregarConexion("Eslavos", "Mongoles");
+
+        grafo.agregarConexion("Magiares", "Hunos");
+        grafo.agregarConexion("Magiares", "Turcos");
+
+        grafo.agregarConexion("Hunos", "Mongoles");
+        grafo.agregarConexion("Hunos", "Godos");
+        grafo.agregarConexion("Hunos", "Persas");
+
+        grafo.agregarConexion("Godos", "Vikingos");
+        grafo.agregarConexion("Godos", "Bizantinos");
+        grafo.agregarConexion("Godos", "Portugueses");
+
+        grafo.agregarConexion("Portugueses", "Bereberes");
+        grafo.agregarConexion("Portugueses", "Etíopes");
+
+        grafo.agregarConexion("Etíopes", "Malíes");
+        grafo.agregarConexion("Etíopes", "Sarracenos");
+
+        grafo.agregarConexion("Dravídicos", "Indostaníes");
+        grafo.agregarConexion("Dravídicos", "Etíopes");
+        grafo.agregarConexion("Dravídicos", "Bengalíes");
+
+        grafo.agregarConexion("Bengalíes", "Jemer");
+        grafo.agregarConexion("Bengalíes", "Birmanos");
+        grafo.agregarConexion("Bengalíes", "Indostaníes");
+
+        grafo.agregarConexion("Jemer", "Malayos");
+        grafo.agregarConexion("Jemer", "Chinos");
+
+        grafo.agregarConexion("Vietnamitas", "Jemer");
+
+        grafo.agregarConexion("Coreanos", "Vietnamitas");
+        grafo.agregarConexion("Coreanos", "Japoneses");
+        grafo.agregarConexion("Coreanos", "Britanos");
 
         return grafo;
     }
