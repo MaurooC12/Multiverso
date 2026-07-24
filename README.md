@@ -13,7 +13,7 @@ La idea surgió considerando una temática diferente y que se alineara con los p
 ### Decisiones de diseño:
 
 - **36 civilizaciones** → Nodos del grafo.
-- **Máximo 6 conexiones por nodo** → Cada civilización tiene entre 4 y 6 rutas de viaje.
+- **Máximo 6 conexiones por nodo** → Cada civilización tiene entre 2 y 6 rutas de viaje.
 - **Grafo conexo** → Se puede llegar de cualquier nodo a cualquier otro.
 - **Conexiones unidireccionales** → Representan rutas comerciales o conquistas históricas donde no se puede devolver a la civilización ya seleccionada.
 - **Dos tipos de unidad** → Ofensiva (10 ataque, 3 defensa) y Defensiva (3 ataque, 10 defensa).
