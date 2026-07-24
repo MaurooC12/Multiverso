@@ -65,10 +65,21 @@ public class Grafo {
         visitados.add(inicio);
         while (!cola.isEmpty()) {
             String actual = cola.poll();
+            // Vecinos salientes
             for (Conexion c : adyacencias.getOrDefault(actual, new ArrayList<>())) {
                 if (!visitados.contains(c.getDestino())) {
                     visitados.add(c.getDestino());
                     cola.add(c.getDestino());
+                }
+            }
+            // Vecinos entrantes (conexiones de otros nodos hacia el actual)
+            for (Map.Entry<String, List<Conexion>> entrada : adyacencias.entrySet()) {
+                String nodoOrigen = entrada.getKey();
+                for (Conexion c : entrada.getValue()) {
+                    if (c.getDestino().equals(actual) && !visitados.contains(nodoOrigen)) {
+                        visitados.add(nodoOrigen);
+                        cola.add(nodoOrigen);
+                    }
                 }
             }
         }
